@@ -139,6 +139,7 @@ $(BUILDDIR)/$(DPKG_CHANGES): $(BUILDDIR)/$(PRODUCT)-$(VERSION)/debian \
 		  $(BUILDDIR)/$(DPKG_DEBIAN_TARBALL) \
 		  $(BUILDDIR)/$(DPKG_ORIG_TARBALL) \
 		  $(BUILDDIR)/$(DPKG_DSC) \
+		  $(BUILDDIR)/*.buildinfo \
 		  $(BUILDDIR)/*.deb
 	@echo "--"
 	@echo
