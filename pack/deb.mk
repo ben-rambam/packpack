@@ -140,7 +140,8 @@ $(BUILDDIR)/$(DPKG_CHANGES): $(BUILDDIR)/$(PRODUCT)-$(VERSION)/debian \
 		  $(BUILDDIR)/$(DPKG_ORIG_TARBALL) \
 		  $(BUILDDIR)/$(DPKG_DSC) \
 		  $(BUILDDIR)/*.buildinfo \
-		  $(BUILDDIR)/*.deb
+		  $(BUILDDIR)/*.deb || true
+	# the || true is because *.buildinfo doesn't always exist and ls will set the return code
 	@echo "--"
 	@echo
 
