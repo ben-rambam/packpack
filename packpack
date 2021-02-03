@@ -160,7 +160,7 @@ docker run \
         -e XDG_CACHE_HOME=/cache \
         -e CCACHE_DIR=/cache/ccache \
         -e TMPDIR=/tmp \
-        --volume "${CACHE_DIR}:/cache" \
+        --volume "${CACHE_DIR}:/cache:Z" \
         ${DOCKER_REPO}:${DOCKER_IMAGE} \
         make -f /pack/Makefile -C /source BUILDDIR=/build -j "$@"
 retcode=$?
